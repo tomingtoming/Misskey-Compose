@@ -1,5 +1,13 @@
 version: '2'
 services:
+  misskey-web:
+    build: Misskey-Web
+    links:
+      - misskey-api
+      - redis
+      - mongo
+    ports:
+      - "8080:8080"
   misskey-api:
     build: Misskey-API
     links:

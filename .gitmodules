@@ -1,3 +1,6 @@
 [submodule "Misskey-API/src"]
 	path = Misskey-API/src
 	url = https://github.com/MissKernel/Misskey-API.git
+[submodule "Misskey-Web/src"]
+	path = Misskey-Web/src
+	url = https://github.com/MissKernel/Misskey-Web.git
