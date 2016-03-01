@@ -2,3 +2,21 @@ version: '2'
 services:
   misskey-api:
     build: Misskey-API
+    links:
+      - redis
+      - mongo
+    expose:
+      - "8080"
+  # Persistence
+  redis:
+    image: redis
+    volumes:
+      - ./Misskey-Data/Redis:/data
+    expose:
+      - "6379"
+  mongo:
+    image: mongo
+    volumes:
+      - ./Misskey-Data/Mongo:/data/db
+    expose:
+      - "27017"
