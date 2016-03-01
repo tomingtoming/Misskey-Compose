@@ -1,0 +1,4 @@
+version: '2'
+services:
+  misskey-api:
+    build: Misskey-API
